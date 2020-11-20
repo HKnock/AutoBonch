@@ -55,6 +55,8 @@ try:
 
     browser.find_element_by_link_text("Начать занятие").click()
 
+    time.sleep(5)
+
 #Третий пользователь
 
     browser.get("https://lk.sut.ru/cabinet/?login=no")
@@ -73,9 +75,11 @@ try:
 
     print("Программа балдеет")
 
-#Четвёртый пользователь
-
     browser.find_element_by_link_text("Начать занятие").click()
+
+    time.sleep(3)
+
+#Четвёртый пользователь
 
     browser.get("https://lk.sut.ru/cabinet/?login=no")
 
