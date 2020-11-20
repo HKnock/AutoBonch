@@ -9,7 +9,7 @@ options.add_argument("--headless")
 options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--no-sandbox")
 
-browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
+browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
 browser.get("https://lk.sut.ru/cabinet/?login=no")
 
 browser.find_element_by_name("users").send_keys("lolu4ka@gmail.com")
