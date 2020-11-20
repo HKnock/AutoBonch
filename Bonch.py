@@ -1,8 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+import os
 
-browser = webdriver.Chrome()
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+
+browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 browser.get("https://lk.sut.ru/cabinet/?login=no")
 
 browser.find_element_by_name("users").send_keys("lolu4ka@gmail.com")
