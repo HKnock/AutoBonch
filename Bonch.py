@@ -5,49 +5,95 @@ import os
 
 print("Программа начинает балдеть")
 
-options = webdriver.ChromeOptions()
-options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-options.add_argument("--headless")
-options.add_argument("--disable-dev-shm-usage")
-options.add_argument("--no-sandbox")
+try:
+    options = webdriver.ChromeOptions()
+    options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    options.add_argument("--headless")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
 
-browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
-browser.get("https://lk.sut.ru/cabinet/?login=no")
+    browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
+    browser.get("https://lk.sut.ru/cabinet/?login=no")
 
-print("Программа берёт аДский разгон на балдёж")
+    print("Программа берёт аДский разгон на балдёж")
 
-browser.find_element_by_name("users").send_keys("lolu4ka@gmail.com")
-browser.find_element_by_name("parole").send_keys("orifeh99")
+#Первый пользователь
 
-browser.find_element_by_name("logButton").click()
+    browser.find_element_by_name("users").send_keys("lolu4ka@gmail.com")
+    browser.find_element_by_name("parole").send_keys("orifeh99")
 
-time.sleep(3)
+    browser.find_element_by_name("logButton").click()
 
-browser.find_element_by_id("heading1").click()
-browser.find_element_by_id("menu_li_6118").click()
+    time.sleep(3)
 
-time.sleep(3)
+    browser.find_element_by_id("heading1").click()
+    browser.find_element_by_id("menu_li_6118").click()
 
-#browser.find_element_by_link_text("Начать занятие").click()
+    time.sleep(3)
 
-time.sleep(5)
+    browser.find_element_by_link_text("Начать занятие").click()
 
-browser.get("https://lk.sut.ru/cabinet/?login=no")
+    time.sleep(5)
 
-browser.find_element_by_name("users").send_keys("gnataly2106@mail.ru")
-browser.find_element_by_name("parole").send_keys("Andrey2002")
+#Второй пользователь
 
-browser.find_element_by_name("logButton").click()
+    browser.get("https://lk.sut.ru/cabinet/?login=no")
 
-time.sleep(3)
+    browser.find_element_by_name("users").send_keys("gnataly2106@mail.ru")
+    browser.find_element_by_name("parole").send_keys("Andrey2002")
 
-browser.find_element_by_id("heading1").click()
-browser.find_element_by_id("menu_li_6118").click()
+    browser.find_element_by_name("logButton").click()
 
-time.sleep(3)
+    time.sleep(3)
 
-print("Программа балдеет")
+    browser.find_element_by_id("heading1").click()
+    browser.find_element_by_id("menu_li_6118").click()
 
-#browser.find_element_by_link_text("Начать занятие").click()
+    time.sleep(3)
 
-#print("Препод не ожил к паре(9(\nИли произошла внутренняя ошибка в программе")
+    print("Программа балдеет")
+
+    browser.find_element_by_link_text("Начать занятие").click()
+
+#Третий пользователь
+
+    browser.get("https://lk.sut.ru/cabinet/?login=no")
+
+    browser.find_element_by_name("users").send_keys("ivanoov16@mail.ru")
+    browser.find_element_by_name("parole").send_keys("novgorod03")
+
+    browser.find_element_by_name("logButton").click()
+
+    time.sleep(3)
+
+    browser.find_element_by_id("heading1").click()
+    browser.find_element_by_id("menu_li_6118").click()
+
+    time.sleep(3)
+
+    print("Программа балдеет")
+
+#Четвёртый пользователь
+
+    browser.find_element_by_link_text("Начать занятие").click()
+
+    browser.get("https://lk.sut.ru/cabinet/?login=no")
+
+    browser.find_element_by_name("users").send_keys("lyagiceva@mail.ru")
+    browser.find_element_by_name("parole").send_keys("Kirik5218")
+
+    browser.find_element_by_name("logButton").click()
+
+    time.sleep(3)
+
+    browser.find_element_by_id("heading1").click()
+    browser.find_element_by_id("menu_li_6118").click()
+
+    time.sleep(3)
+
+    print("Программа балдеет")
+
+    browser.find_element_by_link_text("Начать занятие").click()
+
+except:
+    print("Препод не ожил к паре(9(\nИли произошла внутренняя ошибка в программе\nПрограмма не балдеет(9(")
