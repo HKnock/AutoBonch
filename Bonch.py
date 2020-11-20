@@ -3,6 +3,8 @@ from selenium.webdriver.common.keys import Keys
 import time
 import os
 
+print("Программа начинает балдеть")
+
 options = webdriver.ChromeOptions()
 options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 options.add_argument("--headless")
@@ -11,6 +13,8 @@ options.add_argument("--no-sandbox")
 
 browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
 browser.get("https://lk.sut.ru/cabinet/?login=no")
+
+print("Программа берёт аДский разгон на балдёж")
 
 browser.find_element_by_name("users").send_keys("lolu4ka@gmail.com")
 browser.find_element_by_name("parole").send_keys("orifeh99")
@@ -41,6 +45,8 @@ browser.find_element_by_id("heading1").click()
 browser.find_element_by_id("menu_li_6118").click()
 
 time.sleep(3)
+
+print("Программа балдеет")
 
 #browser.find_element_by_link_text("Начать занятие").click()
 
