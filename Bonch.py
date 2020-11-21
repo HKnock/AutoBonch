@@ -26,7 +26,16 @@ try:
 
 # Первый пользователь
     try:
-        if(current_time >= 540 and current_time <= 1295 and nowa_day != 6):
+        if(
+        ((current_time >= 540 and current_time <= 635) or
+        (current_time >= 645 and current_time <= 740) or
+        (current_time >= 780 and current_time <= 875) or
+        (current_time >= 885 and current_time <= 980) or
+        (current_time >= 990 and current_time <= 1085) or
+        (current_time >= 1095 and current_time <= 1190) or 
+        (current_time >= 1200 and current_time <= 1295)) 
+        and nowa_day != 6
+        ):
             print("Программа балдеет за первого пользователя")
 
             browser.find_element_by_name("users").send_keys("lolu4ka@gmail.com")
@@ -49,7 +58,16 @@ try:
 
 # Второй пользователь
     try:
-        if(current_time >= 540 and current_time <= 1295 and nowa_day != 6):
+        if(
+        ((current_time >= 540 and current_time <= 635) or
+        (current_time >= 645 and current_time <= 740) or
+        (current_time >= 780 and current_time <= 875) or
+        (current_time >= 885 and current_time <= 980) or
+        (current_time >= 990 and current_time <= 1085) or
+        (current_time >= 1095 and current_time <= 1190) or 
+        (current_time >= 1200 and current_time <= 1295)) 
+        and nowa_day != 6
+        ):
             print("Программа балдеет за второго пользователя")
 
             browser.get("https://lk.sut.ru/cabinet/?login=no")
@@ -66,8 +84,6 @@ try:
 
             time.sleep(3)
 
-            print("Программа балдеет")
-
             browser.find_element_by_link_text("Начать занятие").click()
 
             time.sleep(5)
@@ -76,7 +92,16 @@ try:
 
 # Третий пользователь
     try:
-        if(current_time >= 540 and current_time <= 1295 and nowa_day != 6):
+        if(
+        ((current_time >= 540 and current_time <= 635) or
+        (current_time >= 645 and current_time <= 740) or
+        (current_time >= 780 and current_time <= 875) or
+        (current_time >= 885 and current_time <= 980) or
+        (current_time >= 990 and current_time <= 1085) or
+        (current_time >= 1095 and current_time <= 1190) or 
+        (current_time >= 1200 and current_time <= 1295)) 
+        and nowa_day != 6
+        ):
             print("Программа балдеет за третьего пользователя")
 
             browser.get("https://lk.sut.ru/cabinet/?login=no")
@@ -93,8 +118,6 @@ try:
 
             time.sleep(3)
 
-            print("Программа балдеет")
-
             browser.find_element_by_link_text("Начать занятие").click()
 
             time.sleep(3)
@@ -103,7 +126,16 @@ try:
 
 # Четвёртый пользователь
     try:
-        if(current_time >= 540 and current_time <= 1295 and nowa_day != 6):
+        if(
+        ((current_time >= 540 and current_time <= 635) or
+        (current_time >= 645 and current_time <= 740) or
+        (current_time >= 780 and current_time <= 875) or
+        (current_time >= 885 and current_time <= 980) or
+        (current_time >= 990 and current_time <= 1085) or
+        (current_time >= 1095 and current_time <= 1190) or 
+        (current_time >= 1200 and current_time <= 1295)) 
+        and nowa_day != 6
+        ):
             print("Программа балдеет за четвёртого пользователя")
 
             browser.get("https://lk.sut.ru/cabinet/?login=no")
@@ -119,8 +151,6 @@ try:
             browser.find_element_by_id("menu_li_6118").click()
 
             time.sleep(3)
-
-            print("Программа балдеет")
 
             browser.find_element_by_link_text("Начать занятие").click()
 
